@@ -259,3 +259,98 @@
 .service .whyUs__group:nth-child(4)::before {
     background-image: url(../images/settings.png);
 }
+.technology .whyUs {
+    justify-content: flex-end;
+}
+.technology .whyUs__group::before {
+    display: none;
+}
+.technology .whyUs__wrapper {
+    max-width: 589px;
+}
+.technology .whyUs__title::after {
+    right: -100px;
+    @include max-xl {
+        right: -65px;
+    }
+    @include max-md {
+        right: -300px;
+    }
+}
+.technology .whyUs__mobile .whyUs__title::before {
+    
+    @include max-md {
+        left: -150%;
+        width: 150%;
+    }
+}
+.technology .whyUs__info {
+    padding-left: 141px;
+    @include max-md {
+        padding-left: 0;
+    }
+}
+.technology .whyUs__description {
+    @include max-md {
+        max-width: initial;
+    }
+}
+.technology .whyUs__group {
+    @include max-md {
+        padding-top: 0;
+    }
+}
+.technology .whyUs__img {
+    object-fit: contain;
+}
+.technology .whyUs__mobile {
+    background: none;
+    padding: 0;
+}
+.technology .whyUs__mobile .whyUs__title::after{
+    width: 157%;
+}
+.technology .whyUs__mobile .whyUs__title {
+    background: none;
+}
+.technology__img-mobile {
+    display: none;
+    @include max-md {
+        display: block;
+        margin-top: 94px;
+    }
+}
+
+.delivery {
+    background: inherit;
+}
+.delivery .technology .whyUs__info{
+    justify-content: space-evenly;
+}
+.delivery .technology .whyUs__title::after{
+    right: -60px;
+    @include max-xl {
+        right: -35px;
+    }
+}
+.delivery .technology .whyUs__title::after{
+    @include max-md {
+        right: -325px;
+    }
+}
+.delivery .technology__img-mobile{
+    @include max-md {
+        padding: 0 30px;
+    }
+}
+.delivery .technology .whyUs__mobile .whyUs__title::after{
+    @include max-md {
+        width: 200%;
+    }
+}
+.delivery .technology .whyUs__mobile .whyUs__title::before{
+    @include max-md {
+        width: 200%;
+        left: -200%;
+    }
+}

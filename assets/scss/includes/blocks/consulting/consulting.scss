@@ -1,0 +1,274 @@
+.consulting {
+    padding: 141px 165px 140px 266px;
+    background: linear-gradient(
+        269.83deg,
+        #000000 16.46%,
+        rgba(31, 30, 30, 0.614583) 100.8%,
+        rgba(37, 37, 37, 0.614583) 106.48%,
+        rgba(63, 63, 63, 0) 142.57%
+    );
+    backdrop-filter: blur(100px);
+    display: flex;
+    justify-content: space-between;
+    @include max-xxxl {
+        padding: 100px;
+    }
+    @include max-xlmidle {
+        padding: 70px 50px;
+    }
+    @include max-lg {
+        padding: 50px 20px;
+    }
+    @include max-md {
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px 70px;
+    }
+    &__group {
+    }
+    &__title {
+        max-width: 422px;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 132.9%;
+        letter-spacing: 0.035em;
+        font-variant: small-caps;
+        color: #ffffff;
+        @include max-xxxl {
+            font-size: 45px;
+        }
+        @include max-xlmidle {
+            font-size: 35px;
+            max-width: 300px;
+        }
+        @include max-lg {
+            font-size: 30px;
+        }
+        @include max-md {
+            text-align: center;
+            font-size: 36px;
+        }
+    }
+    &__group-button {
+        margin-top: 59px;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 176.9%;
+        text-align: center;
+        letter-spacing: 0.195em;
+        border: 2px solid #ffffff;
+        color: #ffffff;
+        padding: 12px 25px;
+        display: flex;
+        align-items: center;
+        @include max-xxxl {
+            font-size: 18px;
+            margin-top: 50px;
+        }
+        @include max-xlmidle {
+            font-size: 16px;
+            margin-top: 60px;
+            padding: 10px 20px;
+        }
+        @include max-lg {
+            font-size: 14px;
+            padding: 7px 13px;
+        }
+        @include max-md {
+            display: none;
+        }
+    }
+    &__group-button::after {
+        content: "";
+        background-image: url(../images/arrow_long.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 73px;
+        height: 15px;
+        margin-left: 41px;
+        display: block;
+        @include max-xxxl {
+            margin-left: 22px;
+        }
+        @include max-lg {
+            width: 50px;
+            height: 14px;
+        }
+        @include max-md {
+            width: 34px;
+            height: 6px;
+        }
+        @include max-iph {
+            width: 30px;
+            height: 5px;
+        }
+    }
+    &__form {
+        max-width: 55%;
+        @include max-xl {
+            max-width: 60%;
+        }
+        @include max-md {
+            max-width: initial;
+            margin-top: 30px;
+        }
+    }
+    &__form-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 18px;
+        @include max-lg {
+            grid-template-columns: 2fr 1fr 1fr;
+        }
+        @include max-md {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &__label {
+        width: 100%;
+        position: relative;
+        @include max-lg {
+            width: 132px;
+        }
+        @include max-md {
+            width: 100%;
+        }
+    }
+    &__label::after {
+        content: "";
+        background-image: url(../images/select_green.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 9px;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 20px;
+        margin: auto;
+        pointer-events: none;
+        @include max-xxl {
+            right: 10px;
+        }
+    }
+    &__label-color::before {
+        content: "";
+        background-image: url(../images/color.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 21px;
+        height: 22px;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 14px;
+        margin: auto;
+        pointer-events: none;
+        @include max-xl {
+            left: 5px;
+        }
+    }
+    &__label-color .consulting__input {
+        padding-left: 44px;
+        @include max-xl {
+            padding-left: 30px;
+        }
+        @include max-md {
+            padding-left: 33px;
+        }
+    }
+    &__input-group:nth-child(1) {
+        @include max-md {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+    &__input-group:nth-child(4) {
+        @include max-md {
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+    &__input-group {
+        @include max-md {
+
+        }
+    }
+    &__input-title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 149.9%;
+        color: #ffffff;
+        @include max-xlmidle {
+            font-size: 12px;
+        }
+        @include max-md {
+            font-size: 14px;
+        }
+    }
+    &__input {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 15px 18px;
+        width: 100%;
+        border: none;
+        outline: none;
+        @include max-xlmidle {
+            padding: 10px 15px;
+        }
+        @include max-lg {
+            padding: 7px 10px;
+        }
+        @include max-md {
+            padding: 15px 25px;
+        }
+    }
+    &__form-button {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 110.9%;
+        letter-spacing: 0.07em;
+        font-variant: small-caps;
+        color: #ffffff;
+        background: #ff9900;
+        border-radius: 50px;
+        padding: 24px 93px 24px 84px;
+        margin: 80px auto 0;
+        display: block;
+        @include max-xxxl {
+            margin-top: 50px;
+        }
+        @include max-xlmidle {
+            font-size: 14px;
+            padding: 20px 80px;
+        }
+        @include max-lg {
+            font-size: 12px;
+            padding: 15px 40px;
+            margin-top: 45px;
+        }
+        @include max-md {
+            font-size: 16px;
+            padding: 8px 77px;
+            margin-top: 61px;
+            background: #02BB4C;
+            box-shadow: #02bb4c -1px 1px 7px 7px;
+        }
+    }
+}
+select.consulting__input {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 149.9%;
+    color: #212121;
+    @include max-xl {
+        font-size: 14px;
+    }
+    @include max-md {
+        font-size: 16px;
+        line-height: initial;
+    }
+}

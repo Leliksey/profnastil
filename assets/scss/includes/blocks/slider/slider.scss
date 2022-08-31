@@ -1,0 +1,112 @@
+.slider {
+    padding: 36px 0 166px;
+    @include max-lg {
+        padding: 21px 0 151px;
+    }
+    @include max-md {
+        padding: 21px 0 57px;
+    }
+    &__content {
+        position: relative;
+    }
+    & .owl-stage {
+        display: flex;
+        padding: 50px 0;
+        @include max-lg {
+            padding: 35px 0;
+        }
+        @include max-md {
+            padding: 0;
+        }
+    }
+    & .owl-stage-outer {
+        overflow: hidden;
+    }
+    & .center {
+        transform: scale(1.2);
+        filter: grayscale(0) !important;
+        transition: 0.5s;
+        position: relative;
+        z-index: 10;
+        @include max-md {
+            transform: scale(1);
+        }
+    }
+    & .owl-item {
+        filter: grayscale(1);
+        @include max-md {
+            filter: grayscale(0);
+        }
+    }
+    & .owl-nav {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+        @include max-md {
+            display: none;
+        }
+        & button {
+            background: rgba(255, 153, 0, 0.62);
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            position: relative;
+            & span {
+                opacity: 0;
+            }
+        }
+        & button::before {
+            content: "";
+            background-image: url(../images/arr.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 26px;
+            height: 20px;
+        }
+        & button:first-child:before {
+            transform: rotateY(180deg) ;
+        }
+    }
+    & .owl-dots {
+        display: none;
+    }
+    &__button {
+        display: none;
+        @include max-md {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 176.9%;
+            text-align: center;
+            letter-spacing: 0.195em;
+            color: #6c6c6c;
+            border: 1px solid #666666;
+            padding: 1px 10px;
+            width: fit-content;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__button::after {
+        content: "";
+        background-image: url(../images/arrow_long.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: brightness(0.5);
+        width: 40px;
+        height: 5px;
+        display: block;
+        margin-left: 13px;
+    }
+}

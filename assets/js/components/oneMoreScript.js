@@ -12,6 +12,7 @@ $(".burger__close").click(function() {
 
 if ($(window).width() < 768) {
     $(".whyUs__wrapper").addClass("whyUs__wrapper-slider");
+    $(".technology .whyUs__wrapper").removeClass("whyUs__wrapper-slider");
 }
 $( window ).resize(function() {
     if ($(window).width() < 768) {
@@ -29,4 +30,16 @@ $(".whyUs__info .btn__prev").click(function() {
 });
 $(".whyUs__info .btn__next").click(function() {
     $(".whyUs__wrapper .owl-next").click();
+});
+
+
+$(".slider__button").click(function() {
+    $(".slider__content .owl-next").click();
+});
+
+$(".partners__prev").click( function() {
+    $(".partners__slider .owl-prev").click();
+});
+$(".partners__next").click(function() {
+    $(".partners__slider .owl-next").click();
 });
