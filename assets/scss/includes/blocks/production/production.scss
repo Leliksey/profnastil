@@ -1,0 +1,156 @@
+.production {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 17px;
+    padding-top: 100px;
+    background: #f5f5f5;
+    @include max-lg {
+        column-gap: 8px;
+    }
+    @include max-md {
+        flex-direction: column;
+        padding-top: 60px;
+        background: #fff;
+    }
+    &__item {
+        display: grid;
+        position: relative;
+    }
+    &__item:last-child {
+        @include max-md {
+            margin-top: -5px;
+        }
+    }
+    &__img {
+        grid-area: 1/2;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-area: 1/2;
+        max-width: 505px;
+        margin-left: calc(50% - 350px);
+        @include max-xxxl {
+            margin-left: calc(50% - 250px);
+        }
+        @include max-xl {
+            margin-left: calc(50% - 200px);
+            max-width: 350px;
+        }
+        @include max-lg {
+            margin-left: calc(50% - 150px);
+        }
+        @include max-md {
+            max-width: 300px;
+            text-align: center;
+        }
+        @include max-iph {
+            max-width: 250px;
+            margin: 0 auto;
+        }
+    }
+    &__info-title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 110.9%;
+        letter-spacing: 0.07em;
+        color: #ffffff;
+        @include max-xxxl {
+            font-size: 40px;
+        }
+        @include max-xl {
+            font-size: 30px;
+        }
+        @include max-lg {
+            font-size: 25px;
+        }
+        @include max-md {
+            font-size: 24px;
+        }
+        @include max-iph {
+            font-size: 18px;
+        }
+    }
+    &__info-text {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 110.9%;
+        letter-spacing: 0.07em;
+        color: #ffffff;
+        margin-top: 19px;
+        @include max-xxxl {
+            font-size: 54px;
+        }
+        @include max-xl {
+            font-size: 44px;
+        }
+        @include max-lg {
+            font-size: 35px;
+        }
+        @include max-md {
+            font-size: 32px;
+        }
+        @include max-iph {
+            font-size: 18px;
+        }
+    }
+    &__info-button {
+        font-weight: 100;
+        font-size: 28px;
+        line-height: 110.9%;
+        letter-spacing: 0.07em;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+        padding: 17px 49px 17px 31px;
+        margin-top: 103px;
+        width: fit-content;
+        position: relative;
+        display: flex;
+        align-items: center;
+        @include max-xxxl {
+            font-size: 22px;
+            padding: 15px 25px;
+        }
+        @include max-xl {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-top: 60px;
+        }
+        @include max-lg {
+            font-size: 16px;
+            margin-top: 40px;
+        }
+        @include max-md {
+            font-size: 16px;
+            margin: 37px auto;
+        }
+        @include max-iph {
+            font-size: 14px;
+            margin: 20px auto;
+        }
+    }
+    &__info-button::after {
+        content: "";
+        background-image: url(../images/arrow_long.png);
+        background-size: cover;
+        width: 125px;
+        height: 22px;
+        margin-left: 32px;
+        @include max-xxxl {
+            margin-left: 22px;
+        }
+        @include max-lg {
+            width: 80px;
+            height: 14px;
+        }
+        @include max-md {
+            width: 34px;
+            height: 6px;
+        }
+        @include max-iph {
+            width: 30px;
+            height: 5px;
+        }
+    }
+}

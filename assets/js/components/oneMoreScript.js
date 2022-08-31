@@ -22,3 +22,11 @@ $( window ).resize(function() {
         $(".whyUs__wrapper").removeClass("whyUs__wrapper-slider");
     }
   });
+
+
+$(".whyUs__info .btn__prev").click(function() {
+    $(".whyUs__wrapper .owl-prev").click();
+});
+$(".whyUs__info .btn__next").click(function() {
+    $(".whyUs__wrapper .owl-next").click();
+});

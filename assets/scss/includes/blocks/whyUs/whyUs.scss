@@ -27,7 +27,7 @@
         padding-right: 80px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         @include max-lg {
             padding-left: 30px;
             padding-right: 20px;
@@ -124,7 +124,7 @@
             content: "";
             width: 100%;
             height: 10px;
-            background: #02BB4C;
+            background: #02bb4c;
             display: block;
             position: absolute;
             right: -100%;
@@ -133,7 +133,7 @@
             content: "";
             width: 100%;
             height: 10px;
-            background: #02BB4C;
+            background: #02bb4c;
             display: block;
             position: absolute;
             left: -100%;
@@ -144,7 +144,7 @@
         margin-top: 20px;
         @include max-md {
             margin-top: 0;
-            padding: 32px 40px 39px 27px;
+            padding: 32px 40px 0 27px;
             width: 100vw;
             text-align: center;
         }
@@ -173,24 +173,89 @@
         @include max-lg {
             font-size: 16px;
         }
+        @include max-md {
+            max-width: calc(100% - 80px);
+            margin: 10px auto 0;
+        }
+    }
+    &__wrapper {
+        position: relative;
     }
     &__wrapper-slider {
         position: relative;
+        width: 100vw;
+        height: auto;
         & .owl-stage {
             display: flex;
         }
         & .owl-nav {
             position: absolute;
-        }
-        &-nav {
+            top: 0;
+            bottom: 0;
+            margin: auto;
             width: 100vw;
+        }
+        & .owl-item.active {
+            width: auto !important;
+        }
+        & .owl-nav .owl-prev {
+            left: 10px;
             position: absolute;
             top: 0;
             bottom: 0;
-            right: 30px;
             margin: auto;
-            display: flex;
-            justify-content: space-between;
+            width: 13px;
+            font-size: 42px;
+        }
+        & .owl-nav .owl-next {
+            right: 10px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 13px;
+                font-size: 42px;
         }
     }
+}
+.service .whyUs {
+    flex-direction: row-reverse;
+    padding-top: 0;
+}
+.service .whyUs__group {
+    display: -webkit-inline-box;
+    @include max-lg {
+        max-width: 275px;
+    }
+    @include max-md {
+        display: grid;
+        justify-items: center;
+        row-gap: 10px;
+        max-width: initial;
+    }
+}
+.service .whyUs__group::before {
+   content: "";
+   background-size: cover;
+   width: 48px;
+   height: 48px;
+   display: block;
+   margin-right: 23px;
+   @include max-md {
+    margin-right: 0;
+    width: 54px;
+    height: 54px;
+}
+}
+.service .whyUs__group:nth-child(1)::before {
+    background-image: url(../images/project.png);
+}
+.service .whyUs__group:nth-child(2)::before {
+    background-image: url(../images/house.png);
+}
+.service .whyUs__group:nth-child(3)::before {
+    background-image: url(../images/delivery.png);
+}
+.service .whyUs__group:nth-child(4)::before {
+    background-image: url(../images/settings.png);
 }
