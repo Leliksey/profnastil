@@ -1,4 +1,11 @@
 .partners {
+    overflow: hidden;
+    padding-top: 143px;
+    background: #f5f5f5;
+    @include max-md {
+        padding-top: 20px;
+        background: #fff;
+    }
     & .whyUs__title::after {
         width: calc(50% - 295px);
         position: relative;
@@ -20,6 +27,17 @@
         background-image: none;
         padding: 15px 0 0;
     }
+    & .whyUs__mobile .whyUs__title::after {
+        position: absolute;
+        left: 100%;
+        margin-right: 15px;
+        width: 300px;
+    }
+    & .whyUs__mobile .whyUs__title::before {
+        position: absolute;
+        right: 100%;
+        width: 300px;
+    }
     &__brands {
         background-image: url(../images/brands_bg.png);
         padding: 120px 263px;
@@ -35,17 +53,21 @@
         @include max-lg {
             padding: 50px 85px;
             margin-top: 40px;
-         }
-         & .owl-stage-outer {
+        }
+        @include max-sm {
+            padding: 44px 35px;
+            margin-top: 40px;
+        }
+        & .owl-stage-outer {
             overflow: hidden;
-         }
-         & .owl-stage {
+        }
+        & .owl-stage {
             display: flex;
-         }
-         & .owl-nav,
-         & .owl-dots {
+        }
+        & .owl-nav,
+        & .owl-dots {
             display: none;
-         }
+        }
     }
     &__brands-list {
         display: grid;
@@ -53,11 +75,17 @@
         column-gap: 37px;
         row-gap: 76px;
         @include max-xl {
-           row-gap: 40px;
+            row-gap: 40px;
         }
         @include max-lg {
-           column-gap: 20px;
-           row-gap: 30px;
+            column-gap: 20px;
+            row-gap: 30px;
+        }
+        @include max-md {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 34px;
+            column-gap: 17px;
+            justify-items: center;
         }
     }
     &__brands-item {
@@ -74,6 +102,14 @@
             max-width: 200px;
             max-height: 100px;
         }
+        @include max-md {
+            max-width: 175px;
+            height: 120px;
+        }
+        // @include max-sm {
+        //     max-width: 151px;
+        //     max-height: 73px;
+        // }
     }
     &__brands-item img {
         height: 100%;
@@ -82,17 +118,21 @@
     &__prev,
     &__next {
         width: 59px;
+        height: 59px;
         position: absolute;
         top: 0;
         bottom: 0;
         margin: auto;
         height: fit-content;
         display: block;
+        cursor: pointer;
         @include max-xl {
             width: 40px;
+            height: 40px;
         }
         @include max-lg {
             width: 30px;
+            height: 30px;
         }
     }
     &__prev {
@@ -103,6 +143,15 @@
         @include max-lg {
             left: calc(15% - 110px);
         }
+        @include max-md {
+            left: calc(15% - 75px);
+        }
+        @include max-sm {
+            left: calc(15% - 50px);
+        }
+        @include max-iph {
+            left: calc(15% - 40px);
+        }
     }
     &__next {
         right: calc(15% - 160px);
@@ -112,6 +161,15 @@
         }
         @include max-lg {
             right: calc(15% - 110px);
+        }
+        @include max-md {
+            right: calc(15% - 75px);
+        }
+        @include max-sm {
+            right: calc(15% - 50px);
+        }
+        @include max-iph {
+            right: calc(15% - 40px);
         }
     }
 }

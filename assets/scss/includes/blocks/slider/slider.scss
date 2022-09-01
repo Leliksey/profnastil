@@ -1,7 +1,10 @@
 .slider {
     padding: 36px 0 166px;
+    @include max-xxl {
+        padding: 36px 0 100px;
+    }
     @include max-lg {
-        padding: 21px 0 151px;
+        padding: 21px 0 36px;
     }
     @include max-md {
         padding: 21px 0 57px;

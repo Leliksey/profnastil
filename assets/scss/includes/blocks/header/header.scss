@@ -2,7 +2,7 @@
     width: 100%;
     background: #111010;
     @include max-md {
-        position: fixed;
+        position: absolute;
         top: 36px;
         background: none;
         z-index: 10;

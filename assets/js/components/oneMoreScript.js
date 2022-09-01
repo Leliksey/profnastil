@@ -43,3 +43,20 @@ $(".partners__prev").click( function() {
 $(".partners__next").click(function() {
     $(".partners__slider .owl-next").click();
 });
+
+
+$(".experience__block").on("mouseover", function() {
+    $(this).parent().find(".experience__block").removeClass("experience__block_white");
+    $(this).addClass("experience__block_white");
+});
+
+$(".production__info-button").on("click", function() {
+    $(this).parent().parent().parent().find(".production__item ").removeClass("bg__none");
+    $(this).parent().parent().parent().find(".production__item .production__info").removeClass("hide");
+    $(this).parent().parent().parent().find(".production__item .production__slider").addClass("hide");
+
+
+    $(this).parent().addClass("hide");
+    $(this).parent().parent().find(".production__slider").removeClass("hide");
+    $(this).parent().parent().addClass("bg__none");
+});

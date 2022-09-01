@@ -155,8 +155,14 @@
     }
     &__block:nth-child(1) {
         padding-right: 85px;
+        padding-left: 120px;
+        @include max-xxl {
+            padding-right: 15px;
+            padding-left: 40px;
+        }
         @include max-lg {
             padding-right: 15px;
+            padding-left: 20px;
         }
         @include max-md {
             width: 100%;

@@ -127,6 +127,12 @@ table {
 img {
 	width: 100%;
 }
+.bg__none {
+	background: none !important;
+}
+.opacity0 {
+	opacity: 0;
+}
 a {
 	text-decoration: none;
 	text-transform: initial;
@@ -169,25 +175,8 @@ button {
 	@include max-lg {
 		padding: 0 20px;
 	}
-	// @include max-sm {
-	// 	padding: 0 20px;
-	// }
 }
-// .owl-carousel .owl-stage-outer {
-// 	max-width: calc(300px + (1080 - 300) * ((100vw - 375px) / (1920 - 375)));
-// 	@include max-xxl {
-// 		max-width: calc(300px + (1088 - 300) * ((100vw - 375px) / (1920 - 375)));
-// 	}
-// 	@include max-xl {
-// 		max-width: calc(135px + (1080 - 135) * ((100vw - 375px) / (1920 - 375)));
-// 	}
-// 	@include max-lg {
-// 		max-width: calc(80px + (1080 - 80) * ((100vw - 375px) / (1920 - 375)));
-// 	}
-// 	@include max-md {
-// 		max-width: 100%;
-// 	}
-// }
+
 .blockTitle {
 	font-weight: 700;
 	font-size: 38px;

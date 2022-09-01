@@ -1,0 +1,148 @@
+.footer {
+    padding: 88px 263px 312px;
+    background: #2E2D2D;
+    @include max-xl {
+        padding: 50px 100px;
+    }
+    @include max-md {
+        padding: 100px 0;
+    }
+    
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        border-top: 2px solid #FFFFFF;
+        padding-top: 172px;
+        @include max-xxxl {
+            padding-top: 100px;
+        }
+        @include max-xl {
+            flex-direction: column;
+            padding-top: 50px;
+        }
+        @include max-md {
+            padding-top: 82px;
+        }
+        @include max-sm {
+            padding: 82px 35px 0;
+        }
+    }
+    &__info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 56px;
+        column-gap: 134px;
+        align-items: flex-end;
+        @include max-xxxl {
+            column-gap: 50px;
+        }
+        @include max-xl {
+            margin: auto;
+            column-gap: 100px;
+        }
+        @include max-lg {
+            column-gap: 70px;
+        }
+        @include max-md {
+            column-gap: 20px;
+        }
+        @include max-sm {
+            grid-template-columns: 1fr;
+            margin: 0 auto 0 0;
+            row-gap: 52px;
+        }
+    }
+    &__info-group {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 29px;
+        color: #ffffff;
+        display: flex;
+        @include max-xxxl {
+            font-size: 20px;
+        }
+        @include max-md {
+            font-size: 22px;
+        }
+    }
+    &__info-group:nth-child(1)::before,
+    &__info-group:nth-child(3)::before {
+        content: "";
+        background-image: url(../images/geo.png);
+        width: 22px;
+        height: 28px;
+        background-size: contain;
+        display: block;
+        margin-right: 21px;
+        background-repeat: no-repeat;
+        @include max-md {
+            margin-right: 10px;
+        }
+        @include max-sm {
+            margin-right: 21px;
+        }
+        @include max-md {
+            filter: hue-rotate(67deg);
+            opacity: .9;
+        }
+    }
+    &__info-group:nth-child(2),
+    &__info-group:nth-child(4) {
+        flex-direction: column;
+    }
+    &__info-group:nth-child(3) {
+        @include max-sm {
+            grid-row-start: 2;
+        }
+    }
+    &__info-group:nth-child(2) span,
+    &__info-group:nth-child(4) span {
+        display: flex;
+        margin-top: 7px;
+    }
+    &__info-group:nth-child(2) span::before {
+        content: "";
+        background-image: url(../images/mail.png);
+        width: 22px;
+        height: 22px;
+        background-size: contain;
+        display: block;
+        margin-right: 15px;
+        background-repeat: no-repeat;
+        @include max-md {
+            filter: hue-rotate(67deg);
+            opacity: .9;
+        }
+    }
+    &__info-group:nth-child(4) span::before {
+        content: "";
+        background-image: url(../images/tel.png);
+        width: 22px;
+        height: 22px;
+        background-size: contain;
+        display: block;
+        margin-right: 15px;
+        background-repeat: no-repeat;
+        @include max-md {
+            filter: hue-rotate(67deg);
+            opacity: .9;
+        }
+    }
+    &__logo {
+        max-width: 347px;
+        @include max-xxxl {
+            max-width: 250px;
+        }
+        @include max-xxl {
+            margin-left: 20px;
+        }
+        @include max-xl {
+            margin: 100px auto 0;
+        }
+        @include max-md {
+            margin: 84px auto 0;
+            max-width: 289px;
+        }
+    }
+}

@@ -65,4 +65,25 @@ $('.partners__slider').owlCarousel({
     }
 })
 
+$('.production__slider').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    mouseDrag:true,
+    touchDrag: true,
+    pullDrag:false,
+    freeDrag:false,
+    URLhashListener:false,
+    dots:true,
+    autoplay:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:1
+        }
+    }
+})
+
 
