@@ -82,6 +82,10 @@ module.exports = {
           to: './js/jqueryUi.js'
       },
         {
+          from: './assets/libs/jquery.js',
+          to: './js/jquery.js'
+      },
+        {
           from: './assets/libs/owlcarousel/owl.carousel.min.js',
           to: './js/owlcarousel/owl.carousel.min.js'
       },

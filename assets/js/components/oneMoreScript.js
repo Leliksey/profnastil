@@ -101,3 +101,17 @@ $(".slider img").on("mouseover", function() {
 $(".slider__content img").on("mouseleave", function() {
     $(this).parent().parent().find(".not__center").removeClass("not__center");
 });
+
+$(".products__tabs-prev").on("click", function() {
+    $(".products__tab-active").prev().addClass("products__tab-active");
+    $(".products__tab-active").next().removeClass("products__tab-active");
+})
+$(".products__tabs-next").on("click", function() {
+    $(".products__tab-active").next().addClass("products__tab-active");
+    $(".products__tab-active").prev().removeClass("products__tab-active");
+});
+
+$(".products__tab").on("click", function() {
+    $(this).parent().find(".products__tab-active").removeClass("products__tab-active");
+    $(this).addClass("products__tab-active");
+});
