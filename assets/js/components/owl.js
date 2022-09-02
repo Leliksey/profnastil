@@ -110,8 +110,8 @@ $('.products__view-slider').owlCarousel({
     loop:true,
     margin:10,
     nav:true,
-    mouseDrag:true,
-    touchDrag: true,
+    mouseDrag:false,
+    touchDrag: false,
     pullDrag:false,
     freeDrag:false,
     URLhashListener:false,
@@ -131,11 +131,37 @@ $('.products__color-slider').owlCarousel({
     loop:true,
     margin:10,
     nav:true,
-    mouseDrag:true,
-    touchDrag: true,
+    mouseDrag:false,
+    touchDrag: false,
     pullDrag:false,
     freeDrag:false,
-    URLhashListener:false,
+    URLhashListener:true,
+    startPosition: '#20_ral_1014',
+    dots:true,
+    autoplay:false,
+    responsive:{
+        0:{
+            items:3
+        },
+        768:{
+            items:5
+        },
+        2100:{
+            items:5
+        }
+    }
+});
+
+$('.products__view-slider').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    mouseDrag:false,
+    touchDrag: false,
+    pullDrag:false,
+    freeDrag:false,
+    URLhashListener:true,
+    startPosition: '#ps20',
     dots:true,
     autoplay:false,
     responsive:{

@@ -58,13 +58,14 @@
     &__tabs-prev {
         margin-right: 40px;
         width: 43px;
-
+        cursor: pointer;
     }
 
     &__tabs-next {
         margin-left: 40px;
         transform: rotateZ(180deg);
         width: 43px;
+        cursor: pointer;
     }
 
     &__tabs-list {
@@ -81,7 +82,7 @@
         line-height: 109.9%;
         text-align: center;
         letter-spacing: 0.195em;
-        color: #FFFFFF;
+        color: #ffffff;
         width: 106px;
         height: 106px;
         display: flex;
@@ -89,10 +90,12 @@
         align-items: center;
         cursor: pointer;
         &-active {
-            box-shadow: 0px 4px 20px #FFFFFF;
+            box-shadow: 0px 4px 20px #ffffff;
         }
     }
-
+    &__tab:focus {
+        color: #fff;
+    }
     &__view {
         margin-top: 39px;
         max-width: 1069px;
@@ -104,10 +107,8 @@
     }
 
     &__view-slider {
-        // max-width: 988px;
-        // min-height: 228px;
-        // max-height: 228px;
         display: flex;
+        touch-action: none;
         & .owl-stage-outer {
             overflow: hidden;
         }
@@ -115,7 +116,18 @@
             display: flex;
             & img {
                 object-fit: cover;
+                // max-width: 988px;
+                max-height: 228px;
             }
+        }
+        & .owl-item.active {
+            text-align: center;
+        }
+        & .owl-nav {
+            display: none;
+        }
+        & .owl-dots {
+            display: none;
         }
     }
 
@@ -123,19 +135,31 @@
         margin-top: 78px;
         display: flex;
         align-items: center;
+        justify-content: center;
+        position: relative;
     }
 
-    &_item-prev {
+    &__item-prev {
         margin-right: 30px;
+        width: 41px;
+        position: absolute;
+        left: 50px;
     }
 
     &__item-next {
         margin-left: 30px;
+        width: 41px;
+        position: absolute;
+        right: 50px;
+        transform: rotateZ(180deg);
     }
 
     &__color-slider {
         display: flex;
         column-gap: 18px;
+        padding: 0 115px;
+        width: 95%;
+        touch-action: none;
         & .owl-stage-outer {
             overflow: hidden;
         }
@@ -143,19 +167,35 @@
             display: flex;
             & img {
                 object-fit: cover;
+                max-width: 137px;
+                height: 90px;
             }
         }
+        & .owl-nav {
+            display: none;
+        }
+        & .owl-dots {
+            display: none;
+        }
     }
-
+    &__color-group {
+        text-align: center;
+        &_text {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px;
+            color: #000000;
+        }
+    }
     &__button {
-        background: #FF9900;
+        background: #ff9900;
         border-radius: 35px;
         font-weight: 700;
         font-size: 16px;
         line-height: 110.9%;
         letter-spacing: 0.07em;
         font-variant: small-caps;
-        color: #FFFFFF;
+        color: #ffffff;
         margin-top: 49px;
         padding: 25px 80px;
     }
