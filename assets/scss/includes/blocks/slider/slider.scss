@@ -25,21 +25,37 @@
     & .owl-stage-outer {
         overflow: hidden;
     }
+    
+    & .owl-item {
+        filter: grayscale(1);
+        background: #ffc60a;
+        @include max-md {
+            filter: grayscale(0);
+        }
+    }
     & .center {
         transform: scale(1.2);
-        filter: grayscale(0) !important;
+        filter: grayscale(0) ;
         transition: 0.5s;
         position: relative;
         z-index: 10;
+        box-shadow: #ffc60a 0px 2px 17px 7px;
+        
         @include max-md {
             transform: scale(1);
         }
     }
-    & .owl-item {
-        filter: grayscale(1);
-        @include max-md {
-            filter: grayscale(0);
-        }
+    & .owl-item:hover {
+        transform: scale(1.2) ;
+        transition: 0.5s;
+        cursor: grab;
+        z-index: 20;
+        filter: grayscale(0);
+        box-shadow: #ffc60a 0px 2px 17px 7px;
+    }
+    & .owl-item:hover ~ .center {
+        transform: scale(1) ;
+        filter: grayscale(1) ;
     }
     & .owl-nav {
         position: absolute;
@@ -50,6 +66,7 @@
         justify-content: space-evenly;
         align-items: center;
         width: 100vw;
+        pointer-events: none;
         @include max-md {
             display: none;
         }
@@ -59,6 +76,8 @@
             height: 43px;
             border-radius: 50%;
             position: relative;
+            cursor: pointer;
+            pointer-events: all;
             & span {
                 opacity: 0;
             }
@@ -112,4 +131,14 @@
         display: block;
         margin-left: 13px;
     }
+}
+.not__center {
+    transform: scale(1) !important;
+        filter: grayscale(1) !important;
+        transition: 0.5s;
+        position: relative;
+        z-index: 10;
+        @include max-md {
+            transform: scale(1.2) !important;
+        }
 }

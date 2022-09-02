@@ -262,7 +262,10 @@
 }
 .technology .whyUs {
     justify-content: flex-end;
-    background: #fff;
+    background: #f5f5f5;
+    @include max-md {
+        background: #fff;
+    }
 }
 .technology .whyUs__group::before {
     display: none;
@@ -323,54 +326,3 @@
     }
 }
 
-.delivery {
-}
-.delivery .technology .whyUs__info{
-    justify-content: space-evenly;
-    @include max-md {
-        background: linear-gradient(180deg, #2E2D2D 50.01%, rgba(40, 36, 36, 0.78) 100%);
-    }
-}
-.delivery .technology .whyUs__title::after{
-    right: -60px;
-    @include max-xl {
-        right: -35px;
-    }
-}
-.delivery .technology .whyUs__title::after{
-    @include max-md {
-        right: -325px;
-        
-    }
-}
-.delivery .technology__img-mobile{
-    @include max-md {
-        padding: 0 30px;
-    }
-}
-.delivery .technology .whyUs__mobile .whyUs__title::after{
-    @include max-md {
-        width: 200%;
-    }
-}
-.delivery .technology .whyUs__mobile .whyUs__title::before{
-    @include max-md {
-        width: 200%;
-        left: -200%;
-    }
-}
-.delivery .whyUs {
-    background: inherit;
-}
-.delivery .whyUs__info {
-    padding-bottom: 62px;
-}
-.delivery .whyUs__title {
-    color: #fff;
-}
-.delivery .whyUs__description {
-    color: #fff;
-}
-.delivery {
-    padding: 50px 0 0;
-}

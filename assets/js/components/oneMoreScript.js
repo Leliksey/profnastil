@@ -1,3 +1,34 @@
+var videos = document.getElementsByTagName("video");
+
+function checkScroll() {
+    var fraction = 0.8; // Play when 80% of the player is visible.
+
+    for(var i = 0; i < videos.length; i++) {
+
+        var video = videos[i];
+
+        var x = video.offsetLeft, y = video.offsetTop, w = video.offsetWidth, h = video.offsetHeight, r = x + w, //right
+            b = y + h, //bottom
+            visibleX, visibleY, visible;
+
+            visibleX = Math.max(0, Math.min(w, window.pageXOffset + window.innerWidth - x, r - window.pageXOffset));
+            visibleY = Math.max(0, Math.min(h, window.pageYOffset + window.innerHeight - y, b - window.pageYOffset));
+
+            visible = visibleX * visibleY / (w * h);
+
+            if (visible > fraction) {
+                video.play();
+            } else {
+                video.pause();
+            }
+
+    }
+
+}
+
+window.addEventListener('scroll', checkScroll, false);
+window.addEventListener('resize', checkScroll, false);
+
 $(".header__lang .button").click(function() {
     $(this).parent().find(".button").removeClass("button__active");
     $(this).addClass("button__active");
@@ -59,4 +90,14 @@ $(".production__info-button").on("click", function() {
     $(this).parent().addClass("hide");
     $(this).parent().parent().find(".production__slider").removeClass("hide");
     $(this).parent().parent().addClass("bg__none");
+});
+
+
+$(".slider img").on("mouseover", function() {
+    if ($(this).parent().prev().hasClass("center")) {
+        $(this).parent().parent().find(".center").addClass("not__center");
+    }
+});
+$(".slider__content img").on("mouseleave", function() {
+    $(this).parent().parent().find(".not__center").removeClass("not__center");
 });
