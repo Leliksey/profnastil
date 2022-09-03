@@ -174,13 +174,14 @@ $('.products__color-slider').owlCarousel({
 
 $('.products__tabs-slider').owlCarousel({
     loop:true,
-    margin:10,
+    // margin:10,
     nav:true,
     mouseDrag:true,
     touchDrag: false,
     pullDrag:false,
     freeDrag:false,
     URLhashListener:true,
+    center:true,
     dots:true,
     autoplay:false,
     responsive:{
@@ -188,7 +189,7 @@ $('.products__tabs-slider').owlCarousel({
             items:3
         },
         768:{
-            items:5
+            items:3
         }
     }
 });
