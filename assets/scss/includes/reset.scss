@@ -242,3 +242,8 @@ button {
 select {
 	-webkit-appearance: none;
 }
+.disabled {
+	pointer-events: none;
+	filter: grayscale(1);
+	opacity: .7;
+}

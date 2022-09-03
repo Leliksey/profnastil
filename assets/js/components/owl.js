@@ -65,26 +65,26 @@ $('.partners__slider').owlCarousel({
     }
 })
 
-$('.production__slider').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    mouseDrag:true,
-    touchDrag: true,
-    pullDrag:false,
-    freeDrag:false,
-    URLhashListener:false,
-    dots:true,
-    autoplay:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        768:{
-            items:1
-        }
-    }
-})
+// $('.production__slider').owlCarousel({
+//     loop:true,
+//     margin:10,
+//     nav:true,
+//     mouseDrag:true,
+//     touchDrag: true,
+//     pullDrag:false,
+//     freeDrag:false,
+//     URLhashListener:false,
+//     dots:true,
+//     autoplay:false,
+//     responsive:{
+//         0:{
+//             items:1
+//         },
+//         768:{
+//             items:1
+//         }
+//     }
+// })
 $('.production__slider').owlCarousel({
     loop:true,
     margin:10,
@@ -106,6 +106,28 @@ $('.production__slider').owlCarousel({
     }
 });
 
+$('.products__view-items').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    mouseDrag:false,
+    touchDrag: false,
+    pullDrag:false,
+    freeDrag:false,
+    URLhashListener:true,
+    // startPosition: 'h35',
+    dots:true,
+    autoplay:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        768:{
+            items:1
+        }
+    }
+})
+
 $('.products__view-slider').owlCarousel({
     loop:true,
     margin:10,
@@ -114,7 +136,8 @@ $('.products__view-slider').owlCarousel({
     touchDrag: false,
     pullDrag:false,
     freeDrag:false,
-    URLhashListener:false,
+    URLhashListener:true,
+    // startPosition: '20_ral_1014',
     dots:true,
     autoplay:false,
     responsive:{
@@ -131,12 +154,12 @@ $('.products__color-slider').owlCarousel({
     loop:true,
     margin:10,
     nav:true,
-    mouseDrag:false,
+    mouseDrag:true,
     touchDrag: false,
     pullDrag:false,
     freeDrag:false,
     URLhashListener:true,
-    startPosition: '#20_ral_1014',
+    // startPosition: '#20_ral_1014',
     dots:true,
     autoplay:false,
     responsive:{
@@ -145,33 +168,31 @@ $('.products__color-slider').owlCarousel({
         },
         768:{
             items:5
+        }
+    }
+});
+
+$('.products__tabs-slider').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    mouseDrag:true,
+    touchDrag: false,
+    pullDrag:false,
+    freeDrag:false,
+    URLhashListener:true,
+    dots:true,
+    autoplay:false,
+    responsive:{
+        0:{
+            items:3
         },
-        2100:{
+        768:{
             items:5
         }
     }
 });
 
-$('.products__view-slider').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    mouseDrag:false,
-    touchDrag: false,
-    pullDrag:false,
-    freeDrag:false,
-    URLhashListener:true,
-    startPosition: '#ps20',
-    dots:true,
-    autoplay:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        768:{
-            items:1
-        }
-    }
-})
+
 
 
