@@ -9,7 +9,7 @@
     }
     @include max-md {
         flex-direction: column;
-        padding-top: 60px;
+        padding-top: 0;
         background: #fff;
     }
     &__item {

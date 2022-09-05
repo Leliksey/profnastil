@@ -31,6 +31,7 @@
         background: #ffc60a;
         @include max-md {
             filter: grayscale(0);
+            background: none;
         }
     }
     & .center {
@@ -43,6 +44,7 @@
         
         @include max-md {
             transform: scale(1);
+            box-shadow: none;
         }
     }
     & .owl-item:hover {

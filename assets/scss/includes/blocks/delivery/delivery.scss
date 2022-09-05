@@ -1,3 +1,9 @@
+.delivery {
+    padding-top: 187px;
+    @include max-md {
+        padding-top: 60px;
+    }
+}
 .delivery__wrapper {
     max-width: 800px;
     position: relative;
@@ -51,5 +57,11 @@
     justify-content: space-between;
     @include max-md {
         flex-direction: column;
+    }
+}
+.delivery__title span:first-child{
+    background-color: #3c3a3a;
+    @include max-md {
+        background: #2e2d2d;
     }
 }

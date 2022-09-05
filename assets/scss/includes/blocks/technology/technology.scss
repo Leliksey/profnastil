@@ -1,0 +1,102 @@
+.technology {
+    @include max-md {
+        margin-top: 30px;
+    }
+}
+.technology .whyUs {
+    justify-content: flex-end;
+    background: #f5f5f5;
+    @include max-md {
+        background: #fff;
+    }
+}
+.technology .whyUs__group::before {
+    display: none;
+}
+.technology .whyUs__wrapper {
+    max-width: 589px;
+}
+.technology .whyUs__info {
+    padding-left: 141px;
+    @include max-md {
+        padding-left: 0;
+    }
+}
+.technology .whyUs__description {
+    @include max-md {
+        max-width: initial;
+        margin-top: 30px;
+    }
+}
+.technology .whyUs__group {
+    @include max-md {
+        padding-top: 0;
+    }
+}
+.technology .whyUs__img {
+    object-fit: contain;
+}
+.technology .whyUs__mobile {
+    background: none;
+    padding: 0;
+}
+.technology .whyUs__mobile .whyUs__title {
+    background: none;
+}
+.technology__img-mobile {
+    display: none;
+    @include max-md {
+        display: block;
+        margin-top: 30px;
+    }
+}
+.technology__video-mobile {
+    width: 100%;
+}
+
+.technology__title {
+    position: relative;
+    & span:first-child {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 176.9%;
+        text-align: center;
+        letter-spacing: 0.195em;
+        text-transform: uppercase;
+        color: #464646;
+        text-align: left;
+        position: relative;
+        width: fit-content;
+        z-index: 5;
+        background-color: #f5f5f5;
+        padding: 0 10px;
+        display: block;
+        @include max-md {
+            font-size: 23px;
+            margin: auto;
+            background-color: #fff;
+        }
+    }
+    & span:last-child {
+        width: 170%;
+        left: -50%;
+        background: #FF9900;
+        height: 8px;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @include max-xlmidle {
+            width: 200%;
+        }
+        @include max-lg {
+            left: -60%;
+        }
+        @include max-md {
+        width: 100%;
+        background: #02bb4c;
+        left: 0;
+        }
+    }
+}

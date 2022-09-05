@@ -1,10 +1,38 @@
-.partners {
+.partners { 
     overflow: hidden;
     padding-top: 143px;
     background: #f5f5f5;
     @include max-md {
         padding-top: 20px;
         background: #fff;
+    }
+    & .technology__title {
+        & span:first-child {
+            margin-right: 36%;
+            margin-left: auto;
+            @include max-xxxl {
+                margin-right: 25%;
+            }
+            @include max-lg {
+                margin-right: 20%;
+            }
+            @include max-md {
+                margin: auto;
+            }
+        }
+        & span:last-child {
+            right: -50%;
+            left: 0;
+            width: 65%;
+            @include max-lg {
+                width: 80%;
+            }
+            @include max-md {
+                right: 0;
+                width: 100%;
+            }
+        }
+        
     }
     & .whyUs__title::after {
         width: calc(50% - 295px);

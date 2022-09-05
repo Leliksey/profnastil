@@ -1,0 +1,45 @@
+.service .whyUs {
+    flex-direction: row-reverse;
+    padding-top: 92px;
+    @include max-md {
+        padding-top: 0;
+    }
+}
+.service .whyUs__group {
+    display: -webkit-inline-box;
+    @include max-lg {
+        max-width: 275px;
+    }
+    @include max-md {
+        display: grid;
+        justify-items: center;
+        row-gap: 10px;
+        max-width: initial;
+    }
+}
+.service .whyUs__group::before {
+   content: "";
+   background-size: cover;
+   width: 48px;
+   height: 48px;
+   display: block;
+   margin-right: 23px;
+   @include max-md {
+    margin-right: 0;
+    width: 54px;
+    height: 54px;
+}
+}
+.service .whyUs__group:nth-child(1)::before {
+    background-image: url(../images/project.png);
+}
+.service .whyUs__group:nth-child(2)::before {
+    background-image: url(../images/house.png);
+}
+.service .whyUs__group:nth-child(3)::before {
+    background-image: url(../images/delivery.png);
+}
+.service .whyUs__group:nth-child(4)::before {
+    background-image: url(../images/settings.png);
+}
+
