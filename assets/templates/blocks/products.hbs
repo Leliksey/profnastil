@@ -613,6 +613,72 @@
             </div>
         </div>
         <button type="button" class="products__button">Дізнатись наявність</button>
+        <div class="modal">
+            <img src="images/close_modal.png" alt="" class="close__modal">
+            <form action="#" class="consulting__form" method="get">
+                <div class="consulting__form-content">
+                    <div class="consulting__input-group">
+                        <div class="consulting__input-title">ФІО</div>
+                        <input type="text" class="consulting__input" >
+                    </div>
+                    <div class="consulting__input-group">
+                        <div class="consulting__input-title">Тип профлиста:</div>
+                        <label for="" class="consulting__label">
+                            <select class="consulting__input" name="" id="">
+                                <option value="Стіновий">Стіновий</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="consulting__input-group">
+                        <div class="consulting__input-title">Профлист:</div>
+                        <label for="" class="consulting__label">
+                            <select class="consulting__input" name="" id="">
+                                <option value="Н-20">Н-20</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="consulting__input-group">
+                        <div class="consulting__input-title">Колір</div>
+                        <label for="" class="consulting__label consulting__label-color">
+                            <select class="consulting__input" name="" id="">
+                                <option value="RAL 8017">RAL 8017</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="consulting__input-group">
+                        <div class="consulting__input-title">Номер телефону:</div>
+                        <input type="text" class="consulting__input" >
+                    </div>
+                    <div class="consulting__input-group">
+                        <div class="consulting__input-title">Товщина:</div>
+                        <label for="" class="consulting__label">
+                            <select class="consulting__input" name="" id="">
+                                <option value="0.4">0.4</option>
+                                <option value="0.4">0.5</option>
+                                <option value="0.4">0.6</option>
+                                <option value="0.4">0.7</option>
+                                <option value="0.4">0.8</option>
+                                <option value="0.4">0.9</option>
+                                <option value="0.4">1</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="consulting__input-group">
+                        <div class="consulting__input-title">Об’єм</div>
+                        <input type="text" class="consulting__input" >
+                    </div>
+                    <div class="consulting__input-group">
+                        <div class="consulting__input-title">Область:</div>
+                        <label for="" class="consulting__label">
+                            <select class="consulting__input" name="" id="">
+                                <option value="Запорожская"></option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="consulting__form-button">Отримати розрахунок</button>
+            </form>
+        </div>
      </div>
      {{> blocks / delivery}}
 </section>

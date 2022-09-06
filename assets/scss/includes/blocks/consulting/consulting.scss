@@ -7,7 +7,6 @@
         rgba(37, 37, 37, 0.614583) 106.48%,
         rgba(63, 63, 63, 0) 142.57%
     );
-    backdrop-filter: blur(100px);
     display: flex;
     justify-content: space-between;
     @include max-xxxl {
@@ -192,6 +191,7 @@
             grid-column-end: 3;
         }
     }
+    
     &__input-group {
         @include max-md {
 

@@ -28,7 +28,7 @@
     
     & .owl-item {
         filter: grayscale(1);
-        background: #ffc60a;
+        
         @include max-md {
             filter: grayscale(0);
             background: none;
@@ -40,7 +40,7 @@
         transition: 0.5s;
         position: relative;
         z-index: 10;
-        box-shadow: #ffc60a 0px 2px 17px 7px;
+        
         
         @include max-md {
             transform: scale(1);
@@ -53,7 +53,7 @@
         cursor: grab;
         z-index: 20;
         filter: grayscale(0);
-        box-shadow: #ffc60a 0px 2px 17px 7px;
+        
     }
     & .owl-item:hover ~ .center {
         transform: scale(1) ;

@@ -1,3 +1,15 @@
+.service .whyUs__img {
+    max-width: 726px;
+}
+.service .whyUs__info {
+    padding-left: 120px;
+    @include max-xxl {
+		padding-left: 40px; 
+	}
+	@include max-lg {
+		padding-left: 20px;
+	}
+}
 .service .whyUs {
     flex-direction: row-reverse;
     padding-top: 92px;
@@ -7,6 +19,7 @@
 }
 .service .whyUs__group {
     display: -webkit-inline-box;
+    
     @include max-lg {
         max-width: 275px;
     }
@@ -16,6 +29,9 @@
         row-gap: 10px;
         max-width: initial;
     }
+}
+.service .whyUs__group:not(:first-child) {
+    margin-top: 37px;
 }
 .service .whyUs__group::before {
    content: "";
@@ -43,3 +59,6 @@
     background-image: url(../images/settings.png);
 }
 
+// .service .technology__title {
+//     background-image: url(../images/service_img.png);
+// }

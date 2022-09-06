@@ -69,6 +69,7 @@ module.exports = {
       patterns: [
         "./assets/data/browserconfig.xml",
         "./assets/data/manifest.json",
+        
         {
           from: './assets/libs/jquery.maskedinput.js',
           to: './js/jquery.maskedinput.js'

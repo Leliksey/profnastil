@@ -102,7 +102,7 @@ $(".slider__content img").on("mouseleave", function() {
     $(this).parent().parent().find(".not__center").removeClass("not__center");
 });
 
-$(".products__view-items > div:not(:first-child)").addClass("hide");
+// $(".products__view-items > div:not(:first-child)").addClass("hide");
 $(".products__tabs-prev").on("click", function() {
     
     let owl = $('.products__view-items');
@@ -117,10 +117,10 @@ $(".products__tabs-prev").on("click", function() {
         $(".products__tab-active").prev().addClass("products__tab-active");
         $(".products__tab-active").next().removeClass("products__tab-active");
     };
-    $(".products__view-items").find(".owl-item").find("div").addClass("hide");
-    $(".products__view-items").find(".active div").removeClass("hide");
-    $(".products__view-items").find(".products__h75").removeClass("hide");
-    $(".products__view-items").find(".products__h75 *").removeClass("hide");
+    // $(".products__view-items").find(".owl-item").find("div").addClass("hide");
+    // $(".products__view-items").find(".active div").removeClass("hide");
+    // $(".products__view-items").find(".products__h75").removeClass("hide");
+    // $(".products__view-items").find(".products__h75 *").removeClass("hide");
 
     $(".products__tabs-slider .owl-prev").click();
 });
@@ -139,8 +139,8 @@ $(".products__tabs-next").on("click", function() {
         $(".products__tab-active").next().addClass("products__tab-active");
         $(".products__tab-active").prev().removeClass("products__tab-active");
     };
-    $(".products__view-items").find(".owl-item").find("div").addClass("hide");
-    $(".products__view-items").find(".active").find("div").removeClass("hide");
+    // $(".products__view-items").find(".owl-item").find("div").addClass("hide");
+    // $(".products__view-items").find(".active").find("div").removeClass("hide");
     
     $(".products__tabs-slider .owl-next").click();
 });
@@ -149,11 +149,11 @@ $(".products__tab").on("click", function() {
     $(this).parent().find(".products__tab-active").removeClass("products__tab-active");
     $(this).addClass("products__tab-active");
 
-    var timeOut = function () {
-    $(".products__view-items").find(".owl-item").find("div").addClass("hide");
-    $(".products__view-items").find(".owl-item.active").find("div").removeClass("hide");
-    }
-    setTimeout(timeOut, 500);
+    // var timeOut = function () {
+    // $(".products__view-items").find(".owl-item").find("div").addClass("hide");
+    // $(".products__view-items").find(".owl-item.active").find("div").removeClass("hide");
+    // }
+    // setTimeout(timeOut, 500);
     
     // if($(this).hasClass("first")) {
     //     $(this).parent().parent().find(".disabled").removeClass("disabled");
@@ -169,13 +169,13 @@ $(".products__tab").on("click", function() {
 
 
 $(".products__item-prev").on("click", function() {
-    $(".products__color-slider .owl-prev").click();
+    $(".products__color-slider .slick-prev").click();
     // let owl = $('.products__view-slider');
     // owl.owlCarousel();
     // owl.trigger('prev.owl.carousel', [500]);
 });
 $(".products__item-next").on("click", function() {
-    $(".products__color-slider .owl-next").click();
+    $(".products__color-slider .slick-next").click();
     // let owl = $('.products__view-slider');
     // owl.owlCarousel();
     // owl.trigger('next.owl.carousel', [500]);
@@ -183,4 +183,41 @@ $(".products__item-next").on("click", function() {
 
 if ($(window).width() < 768) {
     $(".products__tabs-list").addClass("products__tabs-slider");
-}
+};
+
+
+$(".products__button").on("click", function() {
+    $(".products .modal").slideToggle();
+    $("body").toggleClass("active");
+    var bg = document.createElement("div");
+    $(bg).addClass("body__bg");
+    $("body").append(bg);
+});
+$(".close__modal").on("click", function() {
+    $(".products .modal").slideToggle();
+    $("body").toggleClass("active");
+    $(".body__bg").remove();
+});
+
+$(".products__color-group").on("click", function() {
+    
+
+})
+
+
+// $(window).on('hashchange.owl.navigation', $.proxy(function() {
+//     var hash = window.location.hash.substring(1),
+//         items = this._core.$stage.children(),
+//         position = this._hashes[hash] && items.index(this._hashes[hash]) || 0;
+//         position = this._hashes[hash] && items.index(this._hashes[hash]);
+
+//     if (!hash) {
+//         return false;
+//     }
+//     if (!hash || position === false) {
+//         return false;
+//     }
+
+//     this._core.to(this._core.relative(position), false, true);
+// }, this));
+
