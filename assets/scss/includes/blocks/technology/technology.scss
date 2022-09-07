@@ -18,6 +18,9 @@
 }
 .technology .whyUs__info {
     padding-left: 141px;
+    @include max-lg {
+        padding-left: 20px;
+    }
     @include max-md {
         padding-left: 0;
     }

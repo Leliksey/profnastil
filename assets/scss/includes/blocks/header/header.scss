@@ -33,25 +33,30 @@
         min-width: 150px;
         @include max-lg {
             min-width: 130px;
+            max-width: 170px;
         }
         @include max-md {
             display: none;
         }
     }
     &__menu {
-        margin: 0 119px 0 63px;
+        margin: 0 119px 0 100px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
         @include max-xxxl {
             margin: 0 0 0 50px;
+            justify-content: space-around;
         }
-        @include max-xxl {
-            justify-content: start;
-        }
+        // @include max-xxl {
+        //     justify-content: start;
+        // }
         @include max-xl {
-            margin: 0 0 0 20px;
+            margin: 0 20px 0 20px;
+        }
+        @include max-lg {
+            margin-left: 0;
         }
         @include max-md {
             display: none;
@@ -104,12 +109,14 @@
         border-radius: 30px;
         color: #ffffff;
         padding: 9px 47px 5px;
+        min-width: max-content;
         @include max-xxl {
             font-size: 18px;
             padding: 5px 30px;
         }
         @include max-xl {
             font-size: 16px;
+            margin-right: 15px;
         }
         @include max-lg {
             font-size: 13px;

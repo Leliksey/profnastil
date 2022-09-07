@@ -1,5 +1,6 @@
-* {
-	font-family: "Exo", sans-serif !important;
+body {
+	// font-family: "Exo", sans-serif !important;
+	font-family: 'Roboto', sans-serif !important;
 }
 html,
 body,
@@ -131,6 +132,9 @@ img {
 }
 .bg__none {
 	background: none !important;
+}
+.filter__gray_off {
+	filter: grayscale(0) !important;
 }
 .opacity0 {
 	opacity: 0;
